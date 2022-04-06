@@ -1,0 +1,40 @@
+
+function binary_decimal(){
+    var readlineSync = require('readline-sync');
+var n = readlineSync.questionInt("Press for Binary to decimal conversion '1': -\nPress for Decimal to binary conversion '2' : -");
+    if(n===1){
+        Binary_To_Decimal() //function gives decimal number
+    }else if(n===2){
+        Decimal_TO_Binary() //function gives binary number
+    }
+    else{
+        console.log("!!!!!!!!!!SOMETHING WRONG!!!!!!!!!!!")
+
+    }
+function Binary_To_Decimal(){
+
+    var readlineSync = require('readline-sync');
+    var a= readlineSync.questionInt("enter the binary number : - ")
+         
+    let c = a.toString() 
+    var len = c.length - 1;
+    var store = 0;
+    for (var i = 0; i <= (c.length) - 1; i++) {
+        store += (Number(c[len])) * (2 ** i)
+        len--; // len ko minus krna jaruri h other wise hr baar same hi number dega store wale line mei
+    }
+    console.log(store)
+    }
+function Decimal_TO_Binary(){
+    var readlineSync = require('readline-sync');
+let arr= [readlineSync.questionInt("enter the binary number : - ")]
+function binary(x) {
+    return x.toString(2);
+}
+const output = arr.map(binary);
+console.log(...output);
+}
+}
+binary_decimal()
+
+
