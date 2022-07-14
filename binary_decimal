@@ -33,6 +33,12 @@ function binary(x) {
 }
 const output = arr.map(binary);
 console.log(...output);
+
+
+
+
+
+.......................................
 }
 }
 binary_decimal()
